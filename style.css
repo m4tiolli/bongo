@@ -2,6 +2,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 #msgbox {
     position: fixed;
@@ -58,7 +59,13 @@ html, body {
 .bongo2 {
     opacity: .4;
     width: 400px;
-    animation: bongo1 infinite 5s;
+    animation: bongo1 infinite 2s;
+    position: absolute;
+}
+.bongo3 {
+    opacity: .4;
+    width: 200px;
+    animation: bongo2 infinite 3s;
     position: absolute;
 }
 
@@ -108,4 +115,12 @@ html, body {
     50% {transform: translateX(0%);}
     66% {transform: translateX(-200%);}
     100% {transform: translateX(0%);}
+}
+
+@keyframes bongo2 {
+    0% {transform: translateY(0%);}
+    33% {transform: translateY(200%);}
+    50% {transform: translateY(0%);}
+    66% {transform: translateY(-200%);}
+    100% {transform: translateY(0%);}
 }
