@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+html, body {
+    padding: 0;
+    margin: 0;
+}
+#msgbox {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#msgbox > button {
+    background-color: inherit;
+    border-radius: 10px;
+    font-size: 14pt;
+    font-weight: 700;
+    padding: 1em;
+    font-family: 'Poppins';
+    animation: color infinite ease-out 10s;
+    opacity: .8;
+}
+#msgbox > button:hover {
+    opacity: .4;
+    transition: .4s;
+}
+#msgbox > button:active {
+    transform: translateY(3px);
+    transition: .3s;
+}
+#animation {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: Color infinite 6s;
+}
+#animation > div > img {
+    width: 200px;
+    animation: rotate infinite 3s;
+}
+#animation > div {
+    width: 90%;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: Colorreverse infinite 6s;
+    border-radius: 20px;
+}
+
+@keyframes color {
+    0% {backdrop-filter: hue-rotate(45deg); border:3px solid red; color: red}
+    15% {backdrop-filter: hue-rotate(90deg); border:3px solid orange; color: orange}
+    30% {backdrop-filter: hue-rotate(135deg); border:3px solid yellow; color: yellow}
+    45% {backdrop-filter: hue-rotate(180deg); border:3px solid lightgreen; color: lightgreen}
+    60% {backdrop-filter: hue-rotate(225deg); border:3px solid green; color: green}
+    75% {backdrop-filter: hue-rotate(270deg); border:3px solid blue; color: blue}
+    90% {backdrop-filter: hue-rotate(315deg); border:3px solid purple; color: purple}
+    100% {backdrop-filter: hue-rotate(360deg); border:3px solid red; color: red}
+}
+@keyframes Color {
+    0% {backdrop-filter: hue-rotate(45deg); background-color: red;}
+    15% {backdrop-filter: hue-rotate(90deg); background-color: orange;}
+    30% {backdrop-filter: hue-rotate(135deg); background-color: yellow;}
+    45% {backdrop-filter: hue-rotate(180deg); background-color: lightgreen;}
+    90% {backdrop-filter: hue-rotate(315deg); background-color: green;}
+    60% {backdrop-filter: hue-rotate(225deg); background-color: blue;}
+    75% {backdrop-filter: hue-rotate(270deg); background-color: purple;}
+    100% {backdrop-filter: hue-rotate(360deg); background-color: red;}
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Colorreverse {
+    0% {backdrop-filter: hue-rotate(45deg); background-color: red;}
+    15% {backdrop-filter: hue-rotate(90deg); background-color: purple;}
+    30% {backdrop-filter: hue-rotate(135deg); background-color: blue;}
+    45% {backdrop-filter: hue-rotate(180deg); background-color: green;}
+    90% {backdrop-filter: hue-rotate(315deg); background-color: lightgreen;}
+    60% {backdrop-filter: hue-rotate(225deg); background-color: yellow;}
+    75% {backdrop-filter: hue-rotate(270deg); background-color: orange;}
+    100% {backdrop-filter: hue-rotate(360deg); background-color: red;}
+}
