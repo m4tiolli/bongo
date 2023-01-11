@@ -40,19 +40,26 @@ html, body {
     justify-content: center;
     animation: Color infinite 6s;
 }
-#animation > div > img {
+#animation > div > .bongo1 {
     width: 200px;
     animation: rotate infinite 3s;
 }
 #animation > div {
-    width: 80%;
-    height: 70vh;
+    width: 90%;
+    height: 90vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: Colorreverse infinite 6s;
     border-radius: 20px;
+}
+
+.bongo2 {
+    opacity: .4;
+    width: 400px;
+    animation: bongo1 infinite 5s;
+    position: absolute;
 }
 
 @keyframes color {
@@ -93,4 +100,12 @@ html, body {
     60% {backdrop-filter: hue-rotate(225deg); background-color: yellow;}
     75% {backdrop-filter: hue-rotate(270deg); background-color: orange;}
     100% {backdrop-filter: hue-rotate(360deg); background-color: red;}
+}
+
+@keyframes bongo1 {
+    0% {transform: translateX(0%);}
+    33% {transform: translateX(200%);}
+    50% {transform: translateX(0%);}
+    66% {transform: translateX(-200%);}
+    100% {transform: translateX(0%);}
 }
