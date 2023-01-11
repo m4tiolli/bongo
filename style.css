@@ -45,8 +45,8 @@ html, body {
     animation: rotate infinite 3s;
 }
 #animation > div {
-    width: 90%;
-    height: 90vh;
+    width: 80%;
+    height: 70vh;
     background-color: black;
     display: flex;
     align-items: center;
